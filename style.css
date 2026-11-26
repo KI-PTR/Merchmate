@@ -1,0 +1,1513 @@
+
+/* ==========================================
+   MERCHMATE — BLUE THEME CSS
+   ========================================== */
+
+
+/* ==========================================
+   1. ROOT VARIABLES
+   ========================================== */
+
+:root {
+    --pink: #6dabc1;
+    --pink-dark: #477f96;
+    --pink-light: #e2f1f6;
+    --purple: #9274df;
+    --yellow: #ffe38b;
+    --mint: #c9f2df;
+    --ink: #352d43;
+    --muted: #81778e;
+    --line: #dceaf0;
+}
+
+
+/* ==========================================
+   2. GLOBAL STYLES
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    color: var(--ink);
+    background: #fcfeff;
+    font-size: 15px;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   3. ANNOUNCEMENT BAR
+   ========================================== */
+
+.announcement {
+    background: var(--ink);
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .03em;
+}
+
+
+/* ==========================================
+   4. HEADER & BRAND
+   ========================================== */
+
+.site-header {
+    height: 80px;
+    padding: 0 max(5%, calc((100% - 1200px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffffed;
+    border-bottom: 1px solid #eaf3f6;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(14px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.8px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.accent {
+    color: var(--pink);
+}
+
+.brand small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .5px;
+    color: var(--muted);
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   5. NAVIGATION & CART BUTTON
+   ========================================== */
+
+nav {
+    display: flex;
+    gap: 32px;
+    color: #71677e;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--pink-dark);
+}
+
+.cart-button {
+    border: 0;
+    background: var(--pink);
+    color: white;
+    padding: 11px 15px;
+    border-radius: 13px;
+    font-weight: 900;
+    box-shadow: 0 7px 15px #6dabc133;
+}
+
+.cart-button b {
+    display: inline-grid;
+    place-items: center;
+    background: white;
+    color: var(--pink-dark);
+    border-radius: 50%;
+    min-width: 22px;
+    height: 22px;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+
+/* ==========================================
+   6. HERO SECTION
+   ========================================== */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px 62px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr .92fr;
+    gap: 45px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-product-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    color: var(--pink-dark);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5.2vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -2.8px;
+    margin: 18px 0;
+    font-weight: 900;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.center-heading h2 span,
+.bottom-cta h2 span {
+    color: var(--pink);
+}
+
+.hero h1 i {
+    font-size: 30px;
+    color: #ffbd5b;
+    vertical-align: top;
+}
+
+.hero-copy > p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 475px;
+    margin: 0 0 25px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-actions > span {
+    font-size: 11px;
+    color: #7f7288;
+    font-weight: 800;
+}
+
+.hero-notes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    color: #8a7c91;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   7. BUTTONS
+   ========================================== */
+
+.button {
+    border: 0;
+    border-radius: 13px;
+    padding: 14px 19px;
+    font-weight: 900;
+    font-size: 13px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--pink);
+    color: #fff;
+    box-shadow: 0 9px 19px #6dabc133;
+}
+
+.primary:hover {
+    background: var(--pink-dark);
+}
+
+
+/* ==========================================
+   8. HERO ILLUSTRATION
+   ========================================== */
+
+.hero-art {
+    height: 355px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.blob {
+    width: 330px;
+    height: 300px;
+    background: #e2f1f6;
+    border-radius: 47% 53% 58% 42% / 45% 40% 60% 55%;
+    transform: rotate(-8deg);
+    position: absolute;
+}
+
+.mock {
+    position: absolute;
+    background: white;
+    box-shadow: 0 18px 40px #547f9522;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mock b {
+    font-size: 10px;
+    color: #796d86;
+    margin-top: 8px;
+}
+
+.keychain {
+    width: 160px;
+    height: 190px;
+    border-radius: 28px;
+    left: 14%;
+    top: 16%;
+    transform: rotate(-9deg);
+    z-index: 2;
+}
+
+.ring {
+    width: 39px;
+    height: 39px;
+    border: 7px solid #d8d1e2;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 19px);
+}
+
+.art-cloud {
+    width: 112px;
+    height: 112px;
+    border-radius: 23px;
+    background: #d8f4e6;
+    color: #4b987c;
+    display: grid;
+    place-items: center;
+    font-size: 66px;
+}
+
+.pin {
+    width: 145px;
+    height: 150px;
+    border-radius: 24px;
+    right: 8%;
+    bottom: 12%;
+    transform: rotate(9deg);
+    z-index: 3;
+}
+
+.art-pin {
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    background: #ffe28e;
+    display: grid;
+    place-items: center;
+    color: #b9782b;
+    font-size: 56px;
+    border: 5px solid #fff4ca;
+}
+
+.sticker {
+    position: absolute;
+    z-index: 4;
+}
+
+.star {
+    font-size: 45px;
+    color: #9c7ce6;
+    right: 10%;
+    top: 11%;
+}
+
+.heart {
+    font-size: 39px;
+    color: var(--pink);
+    left: 8%;
+    bottom: 12%;
+}
+
+.smile {
+    width: 43px;
+    height: 43px;
+    background: var(--mint);
+    border-radius: 50%;
+    font-size: 27px;
+    color: #388c70;
+    right: 3%;
+    top: 46%;
+    display: grid;
+    place-items: center;
+}
+
+.art-caption {
+    position: absolute;
+    bottom: 1%;
+    left: 30%;
+    font-size: 10px;
+    color: #8299a5;
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   9. BENEFITS
+   ========================================== */
+
+.benefits {
+    max-width: 1080px;
+    margin: 0 auto 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: white;
+    padding: 22px 28px;
+    box-shadow: 0 10px 35px #547f9510;
+}
+
+.benefits > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-right: 1px solid var(--line);
+}
+
+.benefits > div:last-child {
+    border: 0;
+}
+
+.benefits > div > span {
+    font-size: 25px;
+}
+
+.benefits p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.benefits b {
+    font-size: 12px;
+}
+
+.benefits small {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   10. SECTION LAYOUT
+   ========================================== */
+
+.section-wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.products {
+    padding-bottom: 82px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.center-heading h2 {
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    margin: 10px 0 8px;
+    font-weight: 900;
+}
+
+.section-heading p,
+.center-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   11. PRODUCT FILTERS
+   ========================================== */
+
+.filters {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: white;
+    padding: 10px 15px;
+    font-size: 11px;
+    font-weight: 900;
+    color: #8a7e94;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+}
+
+
+/* ==========================================
+   12. PRODUCT GRID & CARDS
+   ========================================== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #eaf3f6;
+    border-radius: 20px;
+    padding: 10px;
+    background: white;
+    transition: transform .2s, box-shadow .2s;
+    min-width: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px #477f961a;
+}
+
+/* Gambar pada card produk */
+.product-image {
+    width: 100%;
+    height: 263px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    display: block;
+    mix-blend-mode: normal;
+}
+
+/* Gambar pada popup warna */
+.color-preview img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* Gambar pada keranjang */
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.product-image svg {
+    width: 85%;
+    height: 85%;
+    max-width: 230px;
+}
+
+.product-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 8px;
+    background: white;
+    padding: 6px 9px;
+    font-size: 9px;
+    font-weight: 900;
+    color: #76657f;
+}
+
+.product-info {
+    padding: 13px 5px 5px;
+}
+
+.category {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #8299a5;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    margin: 5px 0 6px;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.desc {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0 0 13px;
+    min-height: 30px;
+    line-height: 1.5;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--pink-dark);
+}
+
+.add {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    font-size: 22px;
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+}
+
+.add:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.demo-note {
+    font-size: 10px;
+    color: #8299a5;
+    text-align: center;
+    margin-top: 22px;
+}
+
+
+/* ==========================================
+   13. HOW IT WORKS
+   ========================================== */
+
+.how {
+    background: #f2f8fb;
+    padding: 70px 0 78px;
+    border-block: 1px solid #e8f2f6;
+}
+
+.center-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.steps article {
+    background: white;
+    border: 1px solid #e1edf2;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+.step-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    border-radius: 21px;
+    font-size: 29px;
+    margin: 0 auto 17px;
+}
+
+.pink {
+    background: #e2f1f6;
+}
+
+.yellow {
+    background: #fff1bd;
+}
+
+.mint {
+    background: #d9f7e8;
+}
+
+.steps small {
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    font-weight: 900;
+    color: var(--pink-dark);
+}
+
+.steps h3 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.steps p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* ==========================================
+   14. BOTTOM CTA & FOOTER
+   ========================================== */
+
+.bottom-cta {
+    padding-top: 58px;
+    padding-bottom: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.bottom-cta h2 {
+    font-size: clamp(24px, 3vw, 34px);
+    letter-spacing: -1px;
+    margin: 10px 0;
+}
+
+.bottom-cta p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 24px max(5%, calc((100% - 1200px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+footer .brand {
+    font-size: 18px;
+    color: var(--ink);
+}
+
+footer .brand-icon {
+    width: 31px;
+    height: 31px;
+    font-size: 20px;
+}
+
+footer .brand small {
+    font-size: 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ==========================================
+   15. CART OVERLAY & DRAWER
+   ========================================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #2d203d77;
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: min(440px, 100%);
+    background: white;
+    z-index: 41;
+    transform: translateX(105%);
+    transition: transform .3s;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+
+/* ==========================================
+   16. CART HEADER & ICON BUTTON
+   ========================================== */
+
+.drawer-head,
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.drawer-head h2,
+.modal-head h2 {
+    margin: 5px 0 0;
+    font-size: 25px;
+    letter-spacing: -.8px;
+}
+
+.drawer-head h2 span,
+.modal-head h2 span {
+    color: var(--pink);
+}
+
+.icon-btn {
+    border: 0;
+    background: #eaf4f8;
+    border-radius: 11px;
+    width: 38px;
+    height: 38px;
+    color: var(--ink);
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   17. CART ITEMS & QUANTITY
+   ========================================== */
+
+.cart-items {
+    overflow: auto;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 65px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.thumb {
+    width: 65px;
+    height: 65px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.thumb svg {
+    width: 95%;
+    height: 95%;
+}
+
+.cart-row h3 {
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+
+.cart-price {
+    font-size: 11px;
+    font-weight: 900;
+    color: var(--pink-dark);
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.qty button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--line);
+    background: white;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.qty span {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.remove {
+    border: 0;
+    background: transparent;
+    color: #a3b6c0;
+    font-size: 16px;
+    align-self: start;
+}
+
+
+/* ==========================================
+   18. EMPTY CART
+   ========================================== */
+
+.empty-cart {
+    display: none;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.empty-cart.show {
+    display: flex;
+}
+
+.empty-cart > span {
+    font-size: 48px;
+}
+
+.empty-cart h3 {
+    margin: 14px 0 5px;
+}
+
+.empty-cart p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 20px;
+}
+
+
+/* ==========================================
+   19. CART FOOTER & SUBTOTAL
+   ========================================== */
+
+.cart-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 17px;
+}
+
+.cart-footer.hidden {
+    display: none;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.subtotal strong {
+    font-size: 20px;
+    color: var(--pink-dark);
+}
+
+.cart-footer > p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 10px 0 15px;
+}
+
+.full {
+    width: 100%;
+    min-height: 48px;
+}
+
+
+/* ==========================================
+   20. CHECKOUT MODAL
+   ========================================== */
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #2d203d88;
+    z-index: 50;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    overflow: auto;
+}
+
+.modal-backdrop.open {
+    display: flex;
+}
+
+.modal {
+    width: min(510px, 100%);
+    max-height: calc(100vh - 36px);
+    overflow: auto;
+    background: white;
+    border-radius: 23px;
+    padding: 25px;
+    box-shadow: 0 25px 80px #21122d33;
+}
+
+.intro {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 13px 0 20px;
+}
+
+
+/* ==========================================
+   21. CHECKOUT FORM
+   ========================================== */
+
+form label {
+    display: block;
+    font-size: 11px;
+    font-weight: 900;
+    margin: 14px 0 7px;
+}
+
+form em {
+    color: var(--pink-dark);
+    font-style: normal;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid #d8e8ed;
+    border-radius: 11px;
+    padding: 12px 13px;
+    background: #fcfeff;
+    outline: none;
+    font-size: 12px;
+    color: var(--ink);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px #6dabc118;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================
+   22. ORDER SUMMARY
+   ========================================== */
+
+.summary {
+    background: #eff7fa;
+    border-radius: 13px;
+    padding: 14px;
+    margin: 18px 0 12px;
+    display: grid;
+    gap: 10px;
+}
+
+.summary > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 11px;
+}
+
+.summary b {
+    font-size: 12px;
+}
+
+.summary > div:last-child b {
+    color: var(--pink-dark);
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   23. PAYMENT NOTE
+   ========================================== */
+
+.payment-note {
+    display: flex;
+    gap: 10px;
+    background: #f1fff7;
+    border: 1px solid #d9f6e6;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 19px;
+}
+
+.payment-note b {
+    font-size: 11px;
+}
+
+.payment-note p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #6e8278;
+    margin: 4px 0 0;
+}
+
+
+/* ==========================================
+   24. FORM ERROR & PRIVACY
+   ========================================== */
+
+.form-error {
+    font-size: 11px;
+    color: #c73661;
+    margin: 8px 0;
+}
+
+.privacy {
+    font-size: 9px;
+    text-align: center;
+    color: #8da2ad;
+    line-height: 1.5;
+    margin: 12px 0 0;
+}
+
+
+/* ==========================================
+   25. TOAST NOTIFICATION
+   ========================================== */
+
+.toast {
+    position: fixed;
+    z-index: 70;
+    bottom: 22px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--ink);
+    color: white;
+    padding: 12px 17px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #352d4333;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .25s;
+    max-width: calc(100% - 30px);
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+/* ==========================================
+   26. BODY SCROLL LOCK
+   ========================================== */
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   27. RESPONSIVE — TABLET
+   Maksimal lebar 900px
+   ========================================== */
+
+@media (max-width: 900px) {
+    .hero {
+        gap: 20px;
+        padding-top: 52px;
+    }
+
+    .hero-art {
+        transform: scale(.9);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .benefits {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .site-header {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+
+/* ==========================================
+   28. RESPONSIVE — MOBILE
+   Maksimal lebar 650px
+   ========================================== */
+
+@media (max-width: 650px) {
+    .announcement {
+        font-size: 10px;
+    }
+
+    .site-header {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .cart-button {
+        font-size: 11px;
+        padding: 9px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 21px 28px;
+        gap: 6px;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+        letter-spacing: -2.3px;
+    }
+
+    .hero-copy > p {
+        font-size: 13px;
+    }
+
+    .hero-art {
+        height: 290px;
+        transform: scale(.86);
+        transform-origin: top center;
+        margin-bottom: -35px;
+    }
+
+    .hero-notes {
+        gap: 11px;
+        margin-top: 25px;
+        font-size: 10px;
+    }
+
+
+    /* Benefits */
+
+    .benefits {
+        margin: 0 14px 52px;
+        padding: 15px 7px;
+        gap: 4px;
+    }
+
+    .benefits > div {
+        gap: 5px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefits > div > span {
+        font-size: 22px;
+    }
+
+    .benefits b {
+        font-size: 10px;
+    }
+
+    .benefits small {
+        font-size: 9px;
+    }
+
+
+    /* Product section */
+
+    .section-wrap {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .products {
+        padding-bottom: 55px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2,
+    .center-heading h2 {
+        font-size: 29px;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filter {
+        flex: 1;
+        padding: 10px 7px;
+    }
+
+    .product-grid {
+        gap: 10px;
+    }
+
+    .product-card {
+        padding: 7px;
+        border-radius: 15px;
+    }
+
+    .product-image {
+        height: 150px;
+        border-radius: 11px;
+    }
+
+    .product-info {
+        padding: 10px 3px 4px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .desc {
+        font-size: 10px;
+        min-height: 30px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .add {
+        width: 32px;
+        height: 32px;
+    }
+
+    .product-tag {
+        font-size: 8px;
+        top: 7px;
+        left: 7px;
+    }
+
+
+    /* How it works */
+
+    .how {
+        padding: 52px 0;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .steps article {
+        padding: 19px;
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        column-gap: 15px;
+        text-align: left;
+    }
+
+    .step-icon {
+        grid-row: 1 / 4;
+        margin: 0;
+    }
+
+    .steps small {
+        align-self: end;
+    }
+
+    .steps h3 {
+        margin: 4px 0;
+    }
+
+    .steps p {
+        font-size: 11px;
+    }
+
+
+    /* Bottom CTA */
+
+    .bottom-cta {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .bottom-cta h2 {
+        font-size: 27px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 16px;
+        flex-wrap: wrap;
+    }
+
+    footer p {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+
+    /* Drawer & checkout modal */
+
+    .drawer {
+        padding: 19px;
+    }
+
+    .modal {
+        padding: 19px;
+    }
+
+    .modal-head h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* ==========================================
+   29. ACCESSIBILITY
+   Mengurangi animasi jika diminta pengguna
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}

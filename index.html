@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff5fb">
+
+  <title>MerchMate</title>
+
+  <!-- Favicon / Logo Tab Chrome -->
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <link rel="shortcut icon" href="image/logo.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <img src="image/logo.png" alt="MerchMate Logo" class="brand-icon">
+      <span>
+        merch<span class="accent">mate</span>
+        <small>Your Merch, Your Vibe!</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Produk</a>
+      <a href="#how">Cara PO</a>
+    </nav>
+
+    <button class="cart-button" id="openCart">
+      🛒 Keranjang <b id="cartCount">0</b>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">✦ YOUR NEW FAVE LITTLE THING</span>
+
+        <h1>
+          Small things,<br>
+          <span>big happy</span> energy! <i>♥</i>
+        </h1>
+
+        <p>
+          Souvenir gemas buat nemenin hari-harimu. Pilih keychain dan pin favoritmu,
+          masukin keranjang, lalu pre-order dengan gampang!
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#products">Yuk, pilih produk →</a>
+          <span>♡ Bayar nanti saat barang tersedia</span>
+        </div>
+
+        <div class="hero-notes">
+          <span>🎀 Cute designs</span>
+          <span>💖 Easy pre-order</span>
+          <span>🌈 Made for you</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img
+          src="image/merchmate-hero-art.png"
+          alt="MerchMate Keychain and Pin Collection"
+          class="hero-product-image"
+        >
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+      <div>
+        <span>💌</span>
+        <p>
+          <b>Pre-order mudah</b>
+          <small>Pesan dari mana aja</small>
+        </p>
+      </div>
+
+      <div>
+        <span>🛍️</span>
+        <p>
+          <b>Mix & match</b>
+          <small>Bisa beli banyak item</small>
+        </p>
+      </div>
+
+      <div>
+        <span>💸</span>
+        <p>
+          <b>Bayar nanti</b>
+          <small>Saat barang tersedia</small>
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products section-wrap" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE CUTIE COLLECTION</span>
+          <h2>Find your <span>happy thing!</span> ✿</h2>
+          <p>Pilih yang kamu suka. Boleh lebih dari satu, lho!</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="Keychain">Keychain</button>
+          <button class="filter" data-filter="Pin">Pin</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- HOW TO ORDER -->
+    <section class="how" id="how">
+      <div class="section-wrap">
+        <div class="center-heading">
+          <span class="eyebrow">IT'S SUPER EASY</span>
+          <h2>Gimana cara <span>pre-order?</span></h2>
+          <p>Gampang banget, cuma 3 langkah 💗</p>
+        </div>
+
+        <div class="steps">
+          <article>
+            <div class="step-icon pink">🧸</div>
+            <small>STEP 01</small>
+            <h3>Pilih yang gemas</h3>
+            <p>Temukan keychain atau pin favoritmu, lalu tambahkan ke keranjang.</p>
+          </article>
+
+          <article>
+            <div class="step-icon yellow">🛒</div>
+            <small>STEP 02</small>
+            <h3>Isi data & pesan</h3>
+            <p>Masukkan nama dan WhatsApp aktif agar kelompok kami bisa menghubungimu.</p>
+          </article>
+
+          <article>
+            <div class="step-icon mint">💸</div>
+            <small>STEP 03</small>
+            <h3>Bayar saat tersedia</h3>
+            <p>Belum perlu bayar sekarang. Pembayaran dilakukan saat barang tersedia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta section-wrap">
+      <div>
+        <span class="eyebrow">A LITTLE TREAT FOR YOU</span>
+        <h2>Ready to make your day cuter? <span>♡</span></h2>
+        <p>Souvenir kecil, mood booster besar!</p>
+      </div>
+
+      <a href="#products" class="button primary">Explore the collection →</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a class="brand" href="#home">
+      <span class="brand-icon">♡</span>
+      <span>
+        merch<span class="accent">mate</span>
+        <small>little things, big smiles!</small>
+      </span>
+    </a>
+
+    <p>Made with love for Entrepreneur Fair 💗</p>
+    <span>© <span id="year"></span> MerchMate</span>
+  </footer>
+
+  <!-- CART OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- CART DRAWER -->
+  <aside class="drawer" id="cartDrawer" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <span class="eyebrow">YOUR PICKS</span>
+        <h2>Keranjang <span>♡</span></h2>
+      </div>
+
+      <button class="icon-btn" id="closeCart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="empty-cart" id="emptyCart">
+      <span>🛍️</span>
+      <h3>Keranjangmu masih kosong</h3>
+      <p>Yuk, cari souvenir yang kamu suka!</p>
+      <button class="button primary" id="browseProducts">Lihat produk</button>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="subtotal">
+        <span>Total pre-order</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+
+      <p>♡ Belum perlu membayar sekarang.</p>
+      <button class="button primary full" id="goCheckout">Lanjut isi data →</button>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">ONE LAST THING!</span>
+          <h2 id="checkoutTitle">Data pre-order <span>♡</span></h2>
+        </div>
+
+        <button class="icon-btn" id="closeCheckout">✕</button>
+      </div>
+
+      <p class="intro">
+        Isi data dengan benar supaya kami bisa menghubungimu saat barang tersedia.
+      </p>
+
+      <form id="checkoutForm">
+        <label for="customerName">Nama lengkap <em>*</em></label>
+        <input id="customerName" name="name" required maxlength="100" placeholder="Nama kamu">
+
+        <label for="customerPhone">Nomor WhatsApp <em>*</em></label>
+        <input id="customerPhone" name="phone" type="tel" required maxlength="20" placeholder="Contoh: 081234567890">
+
+        <label for="customerClass">Kelas / kelompok (opsional)</label>
+        <input id="customerClass" name="class" maxlength="80" placeholder="Contoh: SI-1A">
+
+        <label for="customerNote">Catatan pesanan (opsional)</label>
+        <textarea id="customerNote" name="note" rows="3" maxlength="500" placeholder="Catatan desain atau pesanan..."></textarea>
+
+        <div class="summary">
+          <div>
+            <span>Item dipesan</span>
+            <b id="checkoutItems">0 item</b>
+          </div>
+
+          <div>
+            <span>Total pre-order</span>
+            <b id="checkoutTotal">Rp0</b>
+          </div>
+        </div>
+
+        <div class="payment-note">
+          💗
+          <div>
+            <b>Pembayaran nanti, ya!</b>
+            <p>Form ini mencatat pesanan saja. Kamu membayar saat barang tersedia sesuai konfirmasi kelompok MerchMate.</p>
+          </div>
+        </div>
+
+        <p class="form-error" id="formError" role="alert"></p>
+
+        <button class="button primary full" id="submitOrder" type="submit">
+          Kirim pre-order ♡
+        </button>
+
+        <p class="privacy">Data digunakan untuk memproses pesanan ini.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
